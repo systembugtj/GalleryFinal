@@ -29,7 +29,7 @@ dependencies {
 
 
 def libraryGroupId = 'com.conouch.view'
-def libraryArtifactId = 'iamge-gallery'
+def libraryArtifactId = 'image-gallery'
 def libraryVersion = '1.4.8'
 
 publishing {
