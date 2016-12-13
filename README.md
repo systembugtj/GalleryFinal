@@ -5,7 +5,7 @@ I don't like
 
         RxGalleryFinal
                  ....
-                 .openGallery() <== typically not anti-pattern, subscribe is the last call, should not have a call.
+                 .openGallery() <== typically anti-pattern, subscribe is the last call, should not have a call.
 So consider a UX component typically not apply for rx pattern.
 
 # GalleryFinal简介
