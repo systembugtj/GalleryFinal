@@ -82,6 +82,9 @@ class CropUtil {
             exifDest.setAttribute(ExifInterface.TAG_ORIENTATION, exifSource.getAttribute(ExifInterface.TAG_ORIENTATION));
             exifDest.saveAttributes();
             return true;
+        } catch (UnsupportedOperationException e) {
+            ILogger.e(e);
+            return false;
         } catch (IOException e) {
             ILogger.e(e);
             return false;
