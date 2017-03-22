@@ -96,6 +96,9 @@ public class PhotoSelectActivity extends PhotoBaseActivity implements View.OnCli
     protected void onRestoreInstanceState(Bundle savedInstanceState) {
         super.onRestoreInstanceState(savedInstanceState);
         mSelectPhotoList = (ArrayList<PhotoInfo>) getIntent().getSerializableExtra("selectPhotoMap");
+        if (mSelectPhotoList == null) {
+            mSelectPhotoList = new ArrayList<>();
+        }
     }
 
     private Handler mHanlder = new Handler() {
@@ -587,7 +590,9 @@ public class PhotoSelectActivity extends PhotoBaseActivity implements View.OnCli
     protected void onDestroy() {
         super.onDestroy();
         mPhotoTargetFolder = null;
-        mSelectPhotoList.clear();
+        if (mSelectPhotoList != null) {
+            mSelectPhotoList.clear();
+        }
         System.gc();
     }
 }
