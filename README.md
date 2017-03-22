@@ -1,4 +1,13 @@
 ![](images/gallery_final_effect.png)
+Continue to develop as a regular activity not Rx way.
+
+I don't like
+
+        RxGalleryFinal
+                 ....
+                 .openGallery() <== typically anti-pattern, subscribe is the last call, should not have a call.
+So consider a UX component typically not apply for rx pattern.
+
 # GalleryFinal简介
 Android自定义相册，实现了拍照、图片选择（单选/多选）、 裁剪（单/多裁剪）、旋转、ImageLoader无绑定任由开发者选择、功能可配置、主题样式可配置。GalleryFinal为你定制相册。
 
